@@ -1,30 +1,34 @@
 <!DOCTYPE html><html><head>
         <meta charset="UTF-8">
         <title>A-Frame</title>
-            <!-- A-Frame library -->
-      <script src="aframe.min.js"></script>
+        <<!-- main a-frame library -->
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 
-      <!-- A-Frame physics library -->
-      <script src="aframe-physics-system.min.js"></script>
+        <!-- physics library -->
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
 
-      <!-- A-Frame extras library for vr controlers and other stuff  -->
-      <script src="aframe-extras.min.js"></script>
+        <!-- extras library -->
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
-      <!-- A-Frame HREF component library -->
-      <script src="a-frame-href.js"></script>
+        <!-- for the nav mesh -->
+        <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+
+        <!-- A-Frame HREF component library -->
+        <script src="a-frame-href.js"></script>
+
+        <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
 
     </head>
     <body>
     <a-scene physics="" cursor="rayOrigin: mouse">
-      
+
 <!-- Camera -->
       <a-entity id="rig" position="-15 1.5 0" rotation="0 -90 0" movement-controls="">
-      <a-entity id="camera" camera="" look-controls="rayOrigin: mouse" wasd-controls="fly:true;"></a-entity>
+      <a-entity id="camera" camera="" look-controls="rayOrigin: mouse"></a-entity>
       <a-box id="box1" dynamic-body="shape: box; mass:0" visible="false" position="0 0 0" width=".25" height=".25" depth=".25"></a-box>
     </a-entity>
 
 <!-- Assets -->
-      <a-assets img="" src="Home.jpg" id="Home"> </a-assets>
       <a-assets-item src="Chapel.obj" id="Chapel"> </a-assets-item>
       <a-assets-item src="Fence 1.obj" id="F1"> </a-assets-item>
       <a-assets-item src="Fence 2.obj" id="F2"> </a-assets-item>
@@ -40,60 +44,207 @@
       <a-assets-item src="Headstone Pile.obj" id="Pile"> </a-assets-item>
       <a-assets-item src="Graveyard.obj" id="Grave"> </a-assets-item>
       <a-assets-item src="Trees.obj" id="Trees"> </a-assets-item>
-      
+      <a-assets-item src="book.obj" id="Book"> </a-assets-item>
+
 <!-- Chapel -->
-      <a-entity obj-model="obj: #Chapel" position="0 0 0" scale=".01 .01 .01" material="side: double;">
+      <a-entity
+        obj-model="obj: #Chapel"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="
+          side: double;
+          color: #828282">
       </a-entity>
-      
+      <a-box
+        static-body="shape:box"
+        position="4 -.25 0"
+        rotation="0 0 0"
+        width="3"
+        height="1"
+        depth="6"
+        color="#8c6500">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="3 -.25 0"
+        rotation="0 0 0"
+        width=".5"
+        height="3"
+        depth="1"
+        color="#8c6500">
+      </a-box>
+      <a-entity
+        obj-model="obj: #Book"
+        position="3 1.25 0"
+        scale=".025 .025 .025"
+        rotation="0 90 0"
+        material="color: #f5d81b"
+        href="index.html"
+        event-set__enter="_event: mouseenter; _target: #popText1; visible: true"
+        event-set__leave="_event: mouseleave; _target: #popText1; visible: false">
+          <a-text
+            id="popText1"
+            value="The Blessed Archive"
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="10 10 10"
+            rotation="0 0 0"
+            position="0 10 3"
+            geometry="primitive: plane; width: 1.75"
+            material="color: #333">
+          </a-text>
+        </a-entity>
+
 <!-- Graves -->
-      <a-entity obj-model="obj: #Grave" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #Grave"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #b3aaa2">
       </a-entity>
-      <a-entity obj-model="obj: #Pile" position="0 0 .028" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #Pile"
+        position="0 0 .028"
+        scale=".01 .01 .01"
+        material="color: #b3aaa2">
       </a-entity>
-      <a-entity obj-model="obj: #Trees" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #Trees"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #877665">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #Book"
+        position="10 0 9.45"
+        scale=".03 .03 .03"
+        rotation="0 -90 0"
+        material="color: #4de63c"
+        href="Page5.html"
+        event-set__enter="_event: mouseenter; _target: #popText4; visible: true"
+        event-set__leave="_event: mouseleave; _target: #popText4; visible: false">
+          <a-text
+            id="popText4"
+            value="Secrets in the Dark"
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="10 10 10"
+            rotation="0 0 0"
+            position="0 10 3"
+            geometry="primitive: plane; width: 2"
+            material="color: #333">
+          </a-text>>
       </a-entity>
 
 <!-- Fence -->
-      <a-entity obj-model="obj: #F1" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #F1"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #333333">
       </a-entity>
-      <a-entity obj-model="obj: #F2" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #F2"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #333333">
       </a-entity>
-      <a-entity obj-model="obj: #F3" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #F3"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #333333">
       </a-entity>
-      <a-entity obj-model="obj: #F4" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #F4"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #333333">
       </a-entity>
-      <a-entity obj-model="obj: #F5" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #F5"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #333333">
       </a-entity>
-      <a-entity obj-model="obj: #F6" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #F6"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #333333">
       </a-entity>
-      <a-entity obj-model="obj: #F7" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #F7"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #333333">
       </a-entity>
-      <a-entity obj-model="obj: #F8" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #F8"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #333333">
       </a-entity>
-      <a-entity obj-model="obj: #F9" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #F9"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #333333">
       </a-entity>
-      <a-entity obj-model="obj: #F10" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #F10"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #333333">
       </a-entity>
-      <a-entity obj-model="obj: #F11" position="0 0 0" scale=".01 .01 .01">
+      <a-entity
+        obj-model="obj: #F11"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="color: #333333">
       </a-entity>
 
-<!-- Home Portal-->
-      <a-box position="-20 1.5 0" scale="1 1 1" href="index.html" material="src: #Home" animation="property: rotation; 
-        to: 720 360 360; 
-        dur: 6000;
-        dir: alternate;
-        easing: linear; 
-        loop: true">
-      </a-box>
+<!-- Tree Book -->
+      <a-entity
+        obj-model="obj: #Book"
+        position="25 0 29.5"
+        scale=".03 .03 .03"
+        rotation="0 -90 0"
+        material="color: #00e5ff"
+        href="Page2.html"
+        event-set__enter="_event: mouseenter; _target: #popText3; visible: true"
+        event-set__leave="_event: mouseleave; _target: #popText3; visible: false">
+          <a-text
+            id="popText3"
+            value="Innovative Contraptions"
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="10 10 10"
+            position="0 10 3"
+            geometry="primitive: plane; width: 3"
+            material="color: #333">
+          </a-text>>
+      </a-entity>
 
 <!-- Ground -->
-    <a-box static-body="shape:box" position="0 -.5 0" rotation="0 0 0" width="125" height="1" depth="150" color="#ADADAD">
-      </a-box>
-      
+    <a-box
+      static-body="shape:box"
+      position="0 -.5 0"
+      rotation="0 0 0"
+      width="125"
+      height="1"
+      depth="150"
+      color="#d6cfae">
+    </a-box>
+
 <!-- Sky -->
-      <a-sky color="#000000">
+      <a-sky
+        color="#000000">
       </a-sky>
     </a-scene>
-    
+
 
 </body></html>
