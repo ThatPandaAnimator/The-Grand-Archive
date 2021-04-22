@@ -1,0 +1,185 @@
+<!DOCTYPE html><html><head>
+        <meta charset="UTF-8">
+        <title>A-Frame</title>
+    <<!-- main a-frame library -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <!-- physics library -->
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+    <!-- extras library -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+    <!-- for the nav mesh -->
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+
+    <!-- A-Frame HREF component library -->
+    <script src="a-frame-href.js"></script>
+
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+    </head>
+    <body>
+    <a-scene physics="" cursor="rayOrigin: mouse">
+
+<!-- Camera -->
+      <a-entity id="rig" position="0 2 15" rotation="0 0 0" movement-controls="">
+      <a-entity id="camera" camera="" look-controls="rayOrigin: mouse"></a-entity>
+      <a-box id="box1" dynamic-body="shape: box; mass:0" visible="false" position="0 0 0" width=".25" height=".25" depth=".25"></a-box>
+    </a-entity>
+
+<!-- Assets -->
+      <a-assets img="" src="Home.jpg" id="Home"> </a-assets>
+      <a-assets-item src="Bar (Interior Pillar).obj" id="IP"> </a-assets-item>
+      <a-assets-item src="Bar Furniture.obj" id="B1"> </a-assets-item>
+      <a-assets-item src="Bar.obj" id="B2"> </a-assets-item>
+      <a-assets-item src="East Wall (Ad 1).obj" id="E1"> </a-assets-item>
+      <a-assets-item src="East Wall (Ad 2).obj" id="E2"> </a-assets-item>
+      <a-assets-item src="East Wall (Ad 3).obj" id="E3"> </a-assets-item>
+      <a-assets-item src="East Wall (Ad 4).obj" id="E4"> </a-assets-item>
+      <a-assets-item src="East Wall (Wall).obj" id="EW"> </a-assets-item>
+      <a-assets-item src="Ground.obj" id="Floor"> </a-assets-item>
+      <a-assets-item src="North Wall (Ad 1).obj" id="N1"> </a-assets-item>
+      <a-assets-item src="North Wall (Ad 2).obj" id="N2"> </a-assets-item>
+      <a-assets-item src="North Wall (Wall).obj" id="NW"> </a-assets-item>
+      <a-assets-item src="book.obj" id="Book"> </a-assets-item>
+
+<!-- Building -->
+      <a-entity
+        obj-model="obj: #B2"
+        position="0 0 0"
+        scale="1 1 1"
+        material="color: #828282">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #B1"
+        position=".25 0 0"
+        scale="1 1 1"
+        material="color: #80fff4">
+      </a-entity>
+      <a-box
+        position="-12.6 .9 3.45"
+        scale="2.25 2 .25"
+        material="color: #000000">
+      </a-box>
+      <a-box
+        position="-12.6 .9 8.45"
+        scale="2.25 2 .25"
+        material="color: #000000">
+      </a-box>
+      <a-box
+        position="-12.6 .9 13.45"
+        scale="2.3 2 .25"
+        material="color: #000000">
+      </a-box>
+      <a-entity
+        obj-model="obj: #IP"
+        position="0 0 0"
+        scale="1 1 1"
+        material="color: #ff38d1">
+      </a-entity>
+      <a-box
+        position="-21.6 .9 3.4"
+        scale="2.3 2 .25"
+        material="color: #000000">
+      </a-box>
+      <a-box
+        position="-21.6 .9 8.4"
+        scale="2.3 2 .25"
+        material="color: #000000">
+      </a-box>
+      <a-box
+        position="-21.6 .9 13.4"
+        scale="2.3 2 .25"
+        material="color: #000000">
+      </a-box>
+      <a-entity
+        obj-model="obj: #Book"
+        position="-16.75 1.4 -2"
+        scale=".03 .03 .03"
+        rotation="0 35 0"
+        material="color: #ff002b"
+        href="index.html"
+        event-set__enter="_event: mouseenter; _target: #popText1; visible: true"
+        event-set__leave="_event: mouseleave; _target: #popText1; visible: false">
+          <a-text
+            id="popText1"
+            value="A Librarian's Guide to the Universe"
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="10 10 10"
+            rotation="0 0 0"
+            position="0 10 3"
+            geometry="primitive: plane; width: 1.75"
+            material="color: #333">
+          </a-text>
+        </a-entity>
+
+<!-- North Wall/Building -->
+      <a-entity
+        obj-model="obj: #N1"
+        position="0 0 0"
+        scale="1 1 1"
+        material="color: #4de63c">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #N2"
+        position="0 0 0"
+        scale="1 1 1"
+        material="color: #4de63c">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #NW"
+        position="0 0 0"
+        scale="1 1 1"
+        material="color: #3d3d3d">
+      </a-entity>
+
+<!-- East Wall/Building -->
+      <a-entity
+        obj-model="obj: #E1"
+        position="0 0 0"
+        scale="1 1 1"
+        material="color: #4de63c">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #E2"
+        position="0 0 0"
+        scale="1 1 1"
+        material="color: #4de63c">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #E3"
+        position="0 0 0"
+        scale="1 1 1"
+        material="color: #4de63c">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #E4"
+        position="0 0 0"
+        scale="1 1 1"
+        material="color: #4de63c">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #EW"
+        position="0 0 0"
+        scale="1 1 1"
+        material="color: #3d3d3d">
+      </a-entity>
+
+<!-- Ground -->
+      <a-entity
+        obj-model="obj: #Floor"
+        position="0 0 0"
+        scale="1 1 1"
+        material="color: #2b2b2b">
+      </a-entity>
+
+<!-- Sky -->
+      <a-sky
+        color="#000000">
+      </a-sky>
+    </a-scene>
+
+</body></html>

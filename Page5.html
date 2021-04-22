@@ -1,0 +1,88 @@
+<!DOCTYPE html><html><head>
+        <meta charset="UTF-8">
+        <title>A-Frame</title>
+            <!-- A-Frame library -->
+      <script src="aframe.min.js"></script>
+
+      <!-- A-Frame physics library -->
+      <script src="aframe-physics-system.min.js"></script>
+
+      <!-- A-Frame extras library for vr controlers and other stuff  -->
+      <script src="aframe-extras.min.js"></script>
+
+      <!-- A-Frame HREF component library -->
+      <script src="a-frame-href.js"></script>
+
+    </head>
+    <body>
+    <a-scene physics="" cursor="rayOrigin: mouse">
+      
+<!-- Camera -->
+      <a-entity id="rig" position="0 2.5 15" rotation="0 0 0" movement-controls="">
+      <a-entity id="camera" camera="" look-controls="rayOrigin: mouse"></a-entity>
+      <a-box id="box1" dynamic-body="shape: box; mass:0" visible="false" position="0 0 0" width=".25" height=".25" depth=".25"></a-box>
+    </a-entity>
+
+<!-- Assets -->
+      <a-assets img="" src="Home.jpg" id="Home"> </a-assets>
+      <a-assets-item src="Chandelier (Bowl Rim).obj" id="C1"> </a-assets-item>
+      <a-assets-item src="Chandelier (Bowl).obj" id="C2"> </a-assets-item>
+      <a-assets-item src="Chandelier (Candles).obj" id="C3"> </a-assets-item>
+      <a-assets-item src="Chandelier (Chains 1).obj" id="C4"> </a-assets-item>
+      <a-assets-item src="Chandelier (Chains 2).obj" id="C5"> </a-assets-item>
+      <a-assets-item src="Cow.obj" id="Cow"> </a-assets-item>
+      <a-assets-item src="Hands.obj" id="Hands"> </a-assets-item>
+      <a-assets-item src="Mount.obj" id="Mount"> </a-assets-item>
+      <a-assets-item src="Side Tables.obj" id="Tables"> </a-assets-item>
+      <a-assets-item src="Stage.obj" id="Room"> </a-assets-item>
+      <a-assets-item src="Eye.obj" id="Eye"> </a-assets-item>
+      
+<!-- Room -->
+      <a-entity obj-model="obj: #Room" position="0 0 0" scale="1 1 1" material="side:double;">
+      </a-entity>
+      
+<!-- Chandelier -->
+      <a-entity obj-model="obj: #C1" position="0 0 0" scale="1 1 1">
+      </a-entity>
+      <a-entity obj-model="obj: #C2" position="0 0 0" scale="1 1 1">
+      </a-entity>
+      <a-entity obj-model="obj: #C3" position="0 0 0" scale="1 1 1">
+      </a-entity>
+      <a-entity obj-model="obj: #C4" position="0 0 0" scale="1 1 1">
+      </a-entity>
+      <a-entity obj-model="obj: #C5" position="0 0 0" scale="1 1 1">
+      </a-entity>
+
+<!-- Scene -->
+      <a-entity obj-model="obj: #Cow" position="0 0 0" scale="1 1 1">
+      </a-entity>
+      <a-entity obj-model="obj: #Eye" position="0 0 0" scale="1 1 1">
+      </a-entity>
+      <a-entity obj-model="obj: #Hands" position="0 0 0" scale="1 1 1">
+      </a-entity>
+      <a-entity obj-model="obj: #Tables" position="0 0 0" scale="1 1 1">
+      </a-entity>
+      <a-entity obj-model="obj: #Mount" position="0 0 0" scale="1 1 1">
+      </a-entity>
+      <a-box position="-1.4 3 -6.25" rotation="0 100 0" scale="4 6 .2" color="#d1d1d1">
+      </a-box>
+
+<!-- Home Portal-->
+      <a-box position="0 2.5 -20" scale="1 1 1" href="index.html" material="src: #Home" animation="property: rotation; 
+        to: 720 360 360; 
+        dur: 6000;
+        dir: alternate;
+        easing: linear; 
+        loop: true">
+      </a-box>
+      
+<!-- Ground -->
+    <a-box static-body="shape:box" position="0 -.6 0" rotation="0 0 0" width="14" height="1" depth="25" color="#ADADAD">
+      </a-box>
+      
+<!-- Sky -->
+      <a-sky color="#000000">
+      </a-sky>
+    </a-scene>
+    
+</body></html>
