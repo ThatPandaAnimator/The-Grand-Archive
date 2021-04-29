@@ -34,6 +34,7 @@
       <a-assets-item src="Bookshelf.obj" id="Shelf"> </a-assets-item>
       <a-assets-item src="book.obj" id="Book"> </a-assets-item>
       <a-assets-item src="Side Tables.obj" id="Tables"> </a-assets-item>
+      <a-assets-item src="Cow.obj" id="Cow"> </a-assets-item>
 
 <!-- Shelves-->
       <a-entity
@@ -465,6 +466,7 @@
 
 <!-- Books -->
       <a-entity
+        id="book1"
         obj-model="obj: #Book"
         position="2 1.5 -2.25"
         scale=".03 .03 .03"
@@ -472,10 +474,12 @@
         material="color: #ed1fe6"
         href="Page7.html"
         event-set__enter="_event: mouseenter; _target: #popText1; visible: true"
-        event-set__leave="_event: mouseleave; _target: #popText1; visible: false">
+        event-set__leave="_event: mouseleave; _target: #popText1; visible: false"
+        event-set__enterColor="_event: mouseenter; _target: #book1; material.color:#ffffff"
+        event-set__leaveColor="_event: mouseleave; _target: #book1; material.color:#ed1fe6">
           <a-text
             id="popText1"
-            value="Book 1"
+            value="The Lone Chapel"
             align="center"
             color="#FFF"
             visible="false"
@@ -487,27 +491,32 @@
           </a-text>
       </a-entity>
       <a-entity
+        id="book2"
         obj-model="obj: #Book"
         position="-1.9 1.5 -2.25"
         scale=".03 .03 .03"
         rotation="45 0 0"
+        href="index.html"
         material="color: #ff002b"
         event-set__enter="_event: mouseenter; _target: #popText2; visible: true"
-        event-set__leave="_event: mouseleave; _target: #popText2; visible: false">
+        event-set__leave="_event: mouseleave; _target: #popText2; visible: false"
+        event-set__enterColor="_event: mouseenter; _target: #book2; material.color:#ffffff"
+        event-set__leaveColor="_event: mouseleave; _target: #book2; material.color:#ff002b">
           <a-text
             id="popText2"
-            value="Book 2"
+            value="Mobius Strip"
             align="center"
             color="#FFF"
             visible="false"
             scale="10 10 10"
             rotation="-45 0 0"
             position="0 10 3"
-            geometry="primitive: plane; width: 1.75"
+            geometry="primitive: plane; width: 2"
             material="color: #333">
           </a-text>
       </a-entity>
       <a-entity
+        id="book3"
         obj-model="obj: #Book"
         position="2 1.5 2.25"
         scale=".03 .03 .03"
@@ -515,10 +524,12 @@
         material="color: #00e5ff"
         href="Page2.html"
         event-set__enter="_event: mouseenter; _target: #popText3; visible: true"
-        event-set__leave="_event: mouseleave; _target: #popText3; visible: false">
+        event-set__leave="_event: mouseleave; _target: #popText3; visible: false"
+        event-set__enterColor="_event: mouseenter; _target: #book3; material.color:#ffffff"
+        event-set__leaveColor="_event: mouseleave; _target: #book3; material.color:#00e5ff">
           <a-text
             id="popText3"
-            value="Book 3"
+            value="Backalley Bars"
             align="center"
             color="#FFF"
             visible="false"
@@ -530,6 +541,7 @@
           </a-text>>
       </a-entity>
       <a-entity
+        id="book4"
         obj-model="obj: #Book"
         position="-1.9 1.5 2.25"
         scale=".03 .03 .03"
@@ -537,10 +549,12 @@
         material="color: #4de63c"
         href="Page5.html"
         event-set__enter="_event: mouseenter; _target: #popText4; visible: true"
-        event-set__leave="_event: mouseleave; _target: #popText4; visible: false">
+        event-set__leave="_event: mouseleave; _target: #popText4; visible: false"
+        event-set__enterColor="_event: mouseenter; _target: #book4; material.color:#ffffff"
+        event-set__leaveColor="_event: mouseleave; _target: #book4; material.color:#4de63c">
           <a-text
             id="popText4"
-            value="Book 4"
+            value="Closeted Fears"
             align="center"
             color="#FFF"
             visible="false"

@@ -46,6 +46,178 @@
       <a-assets-item src="Trees.obj" id="Trees"> </a-assets-item>
       <a-assets-item src="book.obj" id="Book"> </a-assets-item>
 
+<!-- RP Text -->
+        <a-box
+          position="-10 1.5 0"
+          rotation="0 -90 0"
+          width="6"
+          height="2"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText1; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText1; visible: false">
+            <a-text
+              id="rpText1"
+              value="The air becomes parched with a dry heat."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="0 1.5 0"
+          rotation="0 -90 0"
+          width="6"
+          height="8"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText2; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText2; visible: false">
+            <a-text
+              id="rpText2"
+              value="Little remains, but a heavy air hangs."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4.5"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="-15 1.5 3"
+          rotation="0 180 0"
+          width="6"
+          height="2"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText3; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText3; visible: false">
+            <a-text
+              id="rpText3"
+              value="The barren land blurs with heat waves."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="-6 1.5 13"
+          rotation="0 -90 0"
+          width="10"
+          height="8"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText4; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText4; visible: false">
+            <a-text
+              id="rpText4"
+              value="A graveyard fallen into disrepair..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4.5"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="10.25 1 9.5"
+          rotation="0 -90 0"
+          width="1"
+          height="1"
+          depth=".25"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText5; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText5; visible: false">
+            <a-text
+              id="rpText5"
+              value="Edgar King"
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 0.25"
+              geometry="
+                primitive: plane;
+                width: 1.75"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="12 1.5 13"
+          rotation="0 -90 0"
+          width="10"
+          height="8"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText6; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText6; visible: false">
+            <a-text
+              id="rpText6"
+              value="Skeleton trees remain standing for miles..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 0"
+              geometry="
+                primitive: plane;
+                width: 4.5"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="26 1.5 30"
+          rotation="0 -90 0"
+          width="4"
+          height="8"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText7; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText7; visible: false">
+            <a-text
+              id="rpText7"
+              value="A jagged heart is etched here..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              rotation="0 -45 0"
+              geometry="
+                primitive: plane;
+                width: 4.5"
+              material="color: #333">
+            </a-text>
+        </a-box>
+
+
 <!-- Chapel -->
       <a-entity
         obj-model="obj: #Chapel"
@@ -74,6 +246,7 @@
         color="#8c6500">
       </a-box>
       <a-entity
+        id="book1"
         obj-model="obj: #Book"
         position="3 1.25 0"
         scale=".025 .025 .025"
@@ -81,7 +254,9 @@
         material="color: #f5d81b"
         href="index.html"
         event-set__enter="_event: mouseenter; _target: #popText1; visible: true"
-        event-set__leave="_event: mouseleave; _target: #popText1; visible: false">
+        event-set__leave="_event: mouseleave; _target: #popText1; visible: false"
+        event-set__enterColor="_event: mouseenter; _target: #book1; material.color:#ffffff"
+        event-set__leaveColor="_event: mouseleave; _target: #book1; material.color:#f5d81b">
           <a-text
             id="popText1"
             value="The Blessed Archive"
@@ -116,6 +291,7 @@
         material="color: #877665">
       </a-entity>
       <a-entity
+        id="book2"
         obj-model="obj: #Book"
         position="10 0 9.45"
         scale=".03 .03 .03"
@@ -123,7 +299,9 @@
         material="color: #4de63c"
         href="Page5.html"
         event-set__enter="_event: mouseenter; _target: #popText4; visible: true"
-        event-set__leave="_event: mouseleave; _target: #popText4; visible: false">
+        event-set__leave="_event: mouseleave; _target: #popText4; visible: false"
+        event-set__enterColor="_event: mouseenter; _target: #book2; material.color:#ffffff"
+        event-set__leaveColor="_event: mouseleave; _target: #book2; material.color:#4de63c">
           <a-text
             id="popText4"
             value="Secrets in the Dark"
@@ -208,6 +386,7 @@
 
 <!-- Tree Book -->
       <a-entity
+        id="book3"
         obj-model="obj: #Book"
         position="25 0 29.5"
         scale=".03 .03 .03"
@@ -215,7 +394,9 @@
         material="color: #00e5ff"
         href="Page2.html"
         event-set__enter="_event: mouseenter; _target: #popText3; visible: true"
-        event-set__leave="_event: mouseleave; _target: #popText3; visible: false">
+        event-set__leave="_event: mouseleave; _target: #popText3; visible: false"
+        event-set__enterColor="_event: mouseenter; _target: #book3; material.color:#ffffff"
+        event-set__leaveColor="_event: mouseleave; _target: #book3; material.color:#00e5ff">
           <a-text
             id="popText3"
             value="Innovative Contraptions"

@@ -23,7 +23,7 @@
     <a-scene physics="" cursor="rayOrigin: mouse">
 
 <!-- Camera -->
-      <a-entity id="rig" position="0 2.5 15" rotation="0 0 0" movement-controls="">
+      <a-entity id="rig" position="0 2.5 5" rotation="0 0 0" movement-controls="">
       <a-entity id="camera" camera="" look-controls="rayOrigin: mouse"></a-entity>
       <a-box id="box1" dynamic-body="shape: box; mass:0" visible="false" position="0 0 0" width=".25" height=".25" depth=".25"></a-box>
     </a-entity>
@@ -41,6 +41,304 @@
       <a-assets-item src="Stage.obj" id="Room"> </a-assets-item>
       <a-assets-item src="Eye.obj" id="Eye"> </a-assets-item>
       <a-assets-item src="book.obj" id="Book"> </a-assets-item>
+
+<!-- RP Text -->
+      <a-box
+        position="0 7 20"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText1; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText1; visible: false">
+          <a-text
+            id="rpText1"
+            value=" ' Turn Back... ' "
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
+      <a-box
+        position="0 7 40"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText2; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText2; visible: false">
+          <a-text
+            id="rpText2"
+            value="A dreadful smell permeates..."
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
+      <a-box
+        position="0 7 60"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText3; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText3; visible: false">
+          <a-text
+            id="rpText3"
+            value="Snapping and cracking can be heard..."
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
+      <a-box
+        position="0 7 80"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText4; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText4; visible: false">
+          <a-text
+            id="rpText4"
+            value=" ' Return... Home... ' "
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
+      <a-box
+        position="0 7 100"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText5; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText5; visible: false">
+          <a-text
+            id="rpText5"
+            value="Monstrous cries echo around..."
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
+      <a-box
+        position="0 7 120"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText6; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText6; visible: false">
+          <a-text
+            id="rpText6"
+            value="Scraping and Screeching elevate..."
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
+      <a-box
+        position="0 7 140"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText7; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText7; visible: false">
+          <a-text
+            id="rpText7"
+            value=" ' It grows closer...' "
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
+      <a-box
+        position="0 7 160"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText8; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText8; visible: false">
+          <a-text
+            id="rpText8"
+            value="..."
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
+      <a-box
+        position="0 7 240"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText9; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText9; visible: false">
+          <a-text
+            id="rpText9"
+            value="The silence is deafening..."
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
+      <a-box
+        position="0 7 280"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText10; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText10; visible: false">
+          <a-text
+            id="rpText10"
+            value="Your footsteps fade in..."
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
+      <a-box
+        position="0 7 300"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText11; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText11; visible: false">
+          <a-text
+            id="rpText11"
+            value="Your made it...?"
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
+      <a-box
+        position="0 7 310"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        color="#000000">
+      </a-box>
+      <a-box
+        position="0 7 340"
+        rotation="0 180 0"
+        width="14"
+        height="14"
+        depth=".01"
+        material="opacity: 0"
+        color="#ffffff"
+        event-set__enter="_event: mouseenter; _target: #rpText11; visible: true"
+        event-set__leave="_event: mouseleave; _target: #rpText11; visible: false">
+          <a-text
+            id="rpText11"
+            value="Welcome Back..."
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="1 1 1"
+            position="0 -4.5 1"
+            geometry="
+              primitive: plane;
+              width: 4"
+            material="color: #000">
+          </a-text>
+      </a-box>
 
 <!-- Room -->
       <a-entity
@@ -195,37 +493,194 @@
         depth="23"
         color="#363636">
       </a-box>
-
+      <a-box
+        static-body="shape:box"
+        position="7.15 5.5 207"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="-7.15 5.5 207"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="7.15 5.5 230"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="-7.15 5.5 230"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="7.15 5.5 253"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="-7.15 5.5 253"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="7.15 5.5 276"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="-7.15 5.5 276"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="7.15 5.5 299"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="-7.15 5.5 299"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="7.15 5.5 322"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="-7.15 5.5 322"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="7.15 5.5 345"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="-7.15 5.5 345"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="7.15 5.5 368"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="-7.15 5.5 368"
+        rotation="0 0 0"
+        width="1"
+        height="13.5"
+        depth="23"
+        color="#363636">
+      </a-box>
+      <a-entity
+        obj-model="obj: #Room"
+        position="0 0 368"
+        scale="1 1 1"
+        rotation="0 180 0"
+        material="
+          side:double;
+          color: #363636">
+      </a-entity>
 
 <!-- Chandelier -->
       <a-entity
         obj-model="obj: #C1"
         position="0 0 0"
         scale="1 1 1"
+        rotation="0 0 0"
         material="color: #a1823f">
       </a-entity>
       <a-entity
         obj-model="obj: #C2"
         position="0 0 0"
         scale="1 1 1"
+        rotation="0 0 0"
         material="color: #a1823f">
       </a-entity>
       <a-entity
         obj-model="obj: #C3"
         position="0 0 0"
         scale="1 1 1"
+        rotation="0 0 0"
         material="color: #a1823f">
       </a-entity>
       <a-entity
         obj-model="obj: #C4"
         position="0 0 0"
         scale="1 1 1"
+        rotation="0 0 0"
         material="color: #a1823f">
       </a-entity>
       <a-entity
         obj-model="obj: #C5"
         position="0 0 0"
         scale="1 1 1"
+        rotation="0 0 0"
         material="color: #a1823f">
       </a-entity>
 
@@ -234,26 +689,28 @@
         obj-model="obj: #Cow"
         position="0 0 0"
         scale="1 1 1"
+        rotation="0 0 0"
         material="color: #d4a746">
       </a-entity>
       <a-entity
         obj-model="obj: #Eye"
         position="0 0 0"
         scale="1 1 1"
+        rotation="0 0 0"
         material="color: #fafafa"
         href="index.html"
         event-set__enter="_event: mouseenter; _target: #popText1; visible: true"
         event-set__leave="_event: mouseleave; _target: #popText1; visible: false">
           <a-text
             id="popText1"
-            value="'Come... Home...'"
+            value=" ' Come... Home... ' "
             align="center"
             color="#FFF"
             visible="false"
             scale="2 2 2"
             rotation="0 0 0"
             position="0 3 -10"
-            geometry="primitive: plane; width: 1.75"
+            geometry="primitive: plane; width: 2"
             material="color: #333">
           </a-text>>
       </a-entity>
@@ -261,26 +718,126 @@
         obj-model="obj: #Hands"
         position="0 0 0"
         scale="1 1 1"
+        rotation="0 0 0"
         material="color: #439e31">
       </a-entity>
       <a-entity
         obj-model="obj: #Tables"
         position="0 0 0"
         scale="1 1 1"
+        rotation="0 0 0"
         material="color: #634725">
       </a-entity>
       <a-entity
         obj-model="obj: #Mount"
         position="0 0 0"
         scale="1 1 1"
+        rotation="0 0 0"
         material="color: #ede5ca">
       </a-entity>
       <a-box
         position="-1.4 3 -6.25"
         rotation="0 100 0"
         scale="4 6 .2"
+        rotation="0 0 0"
         color="#613d00">
       </a-box>
+
+<!-- Chandelier 2-->
+            <a-entity
+              obj-model="obj: #C1"
+              position="0 0 368"
+              scale="1 1 1"
+              rotation="0 180 0"
+              material="color: #a1823f">
+            </a-entity>
+            <a-entity
+              obj-model="obj: #C2"
+              position="0 0 368"
+              scale="1 1 1"
+              rotation="0 180 0"
+              material="color: #a1823f">
+            </a-entity>
+            <a-entity
+              obj-model="obj: #C3"
+              position="0 0 368"
+              scale="1 1 1"
+              rotation="0 180 0"
+              material="color: #a1823f">
+            </a-entity>
+            <a-entity
+              obj-model="obj: #C4"
+              position="0 0 368"
+              scale="1 1 1"
+              rotation="0 180 0"
+              material="color: #a1823f">
+            </a-entity>
+            <a-entity
+              obj-model="obj: #C5"
+              position="0 0 368"
+              scale="1 1 1"
+              rotation="0 180 0"
+              material="color: #a1823f">
+            </a-entity>
+
+      <!-- Scene 2-->
+            <a-entity
+              obj-model="obj: #Cow"
+              position="0 0 368"
+              scale="1 1 1"
+              rotation="0 180 0"
+              material="color: #d4a746">
+            </a-entity>
+            <a-entity
+              obj-model="obj: #Eye"
+              position="0 0 368"
+              scale="1 1 1"
+              rotation="0 180 0"
+              material="color: #fafafa"
+              href="index.html"
+              event-set__enter="_event: mouseenter; _target: #popText2; visible: true"
+              event-set__leave="_event: mouseleave; _target: #popText2; visible: false">
+                <a-text
+                  id="popText2"
+                  value="'Come... Home...'"
+                  align="center"
+                  color="#FFF"
+                  visible="false"
+                  scale="2 2 2"
+                  rotation="0 0 0"
+                  position="0 3 -10"
+                  geometry="primitive: plane; width: 1.75"
+                  material="color: #333">
+                </a-text>>
+            </a-entity>
+            <a-entity
+              obj-model="obj: #Hands"
+              position="0 0 368"
+              scale="1 1 1"
+              rotation="0 180 0"
+              material="color: #439e31">
+            </a-entity>
+            <a-entity
+              obj-model="obj: #Tables"
+              position="0 0 368"
+              scale="1 1 1"
+              rotation="0 180 0"
+              material="color: #634725">
+            </a-entity>
+            <a-entity
+              obj-model="obj: #Mount"
+              position="0 0 368"
+              scale="1 1 1"
+              rotation="0 180 0"
+              material="color: #ede5ca">
+            </a-entity>
+            <a-box
+              position="-1.4 3 -6.25"
+              rotation="0 100 368"
+              scale="4 6 .2"
+              rotation="0 180 0"
+              color="#613d00">
+            </a-box>
 
 <!-- Ground -->
     <a-box
@@ -364,6 +921,78 @@
       depth="23"
       color="#e31b1b">
     </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 -.5 207"
+      rotation="0 0 0"
+      width="13.5"
+      height="1"
+      depth="23"
+      color="#e31b1b">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 -.5 230"
+      rotation="0 0 0"
+      width="13.5"
+      height="1"
+      depth="23"
+      color="#e31b1b">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 -.5 253"
+      rotation="0 0 0"
+      width="13.5"
+      height="1"
+      depth="23"
+      color="#e31b1b">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 -.5 276"
+      rotation="0 0 0"
+      width="13.5"
+      height="1"
+      depth="23"
+      color="#e31b1b">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 -.5 299"
+      rotation="0 0 0"
+      width="13.5"
+      height="1"
+      depth="23"
+      color="#e31b1b">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 -.5 322"
+      rotation="0 0 0"
+      width="13.5"
+      height="1"
+      depth="23"
+      color="#e31b1b">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 -.5 345"
+      rotation="0 0 0"
+      width="13.5"
+      height="1"
+      depth="23"
+      color="#e31b1b">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 -.5 368"
+      rotation="0 0 0"
+      width="13.5"
+      height="1"
+      depth="23"
+      color="#e31b1b">
+    </a-box>
 
 <!-- Ceiling -->
     <a-box
@@ -432,6 +1061,78 @@
     <a-box
       static-body="shape:box"
       position="0 13 184"
+      rotation="0 0 0"
+      width="14"
+      height="1"
+      depth="23"
+      color="#363636">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 13 207"
+      rotation="0 0 0"
+      width="14"
+      height="1"
+      depth="23"
+      color="#363636">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 13 230"
+      rotation="0 0 0"
+      width="14"
+      height="1"
+      depth="23"
+      color="#363636">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 13 253"
+      rotation="0 0 0"
+      width="14"
+      height="1"
+      depth="23"
+      color="#363636">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 13 276"
+      rotation="0 0 0"
+      width="14"
+      height="1"
+      depth="23"
+      color="#363636">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 13 299"
+      rotation="0 0 0"
+      width="14"
+      height="1"
+      depth="23"
+      color="#363636">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 13 322"
+      rotation="0 0 0"
+      width="14"
+      height="1"
+      depth="23"
+      color="#363636">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 13 345"
+      rotation="0 0 0"
+      width="14"
+      height="1"
+      depth="23"
+      color="#363636">
+    </a-box>
+    <a-box
+      static-body="shape:box"
+      position="0 13 368"
       rotation="0 0 0"
       width="14"
       height="1"

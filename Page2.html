@@ -43,6 +43,176 @@
       <a-assets-item src="North Wall (Wall).obj" id="NW"> </a-assets-item>
       <a-assets-item src="book.obj" id="Book"> </a-assets-item>
 
+<!-- RP Text -->
+        <a-box
+          position="0 2 10"
+          rotation="0 0 0"
+          width="4"
+          height="4"
+          depth=".01"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText1; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText1; visible: false">
+            <a-text
+              id="rpText1"
+              value="City sounds surround you..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4"
+              material="color: #000">
+            </a-text>
+        </a-box>
+        <a-box
+          position="-5 2 15"
+          rotation="0 90 0"
+          width="10"
+          height="4"
+          depth=".5"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText3; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText3; visible: false">
+            <a-text
+              id="rpText3"
+              value="A crumbling bar stands on its last legs..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4"
+              material="color: #000">
+            </a-text>
+        </a-box>
+        <a-box
+          position="-15 2 1"
+          rotation="0 90 0"
+          width="2"
+          height="4"
+          depth=".01"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText4; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText4; visible: false">
+            <a-text
+              id="rpText4"
+              value="Music blasts and seedy characters sit..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4"
+              material="color: #000">
+            </a-text>
+        </a-box>
+        <a-box
+          position="-16.5 2 -3"
+          rotation="0 0 0"
+          width="4"
+          height="4"
+          depth=".5"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText5; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText5; visible: false">
+            <a-text
+              id="rpText5"
+              value="Colorful drinks line the shelves..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 0"
+              geometry="
+                primitive: plane;
+                width: 4"
+              material="color: #000">
+            </a-text>
+        </a-box>
+        <a-box
+          position="-16.5 2 5"
+          rotation="0 180 0"
+          width="4"
+          height="4"
+          depth=".5"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText6; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText6; visible: false">
+            <a-text
+              id="rpText6"
+              value="Neon lights flare and nearly blind you..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 0"
+              geometry="
+                primitive: plane;
+                width: 4"
+              material="color: #000">
+            </a-text>
+        </a-box>
+        <a-box
+          position="-15 2 -13"
+          rotation="0 90 0"
+          width="10"
+          height="4"
+          depth=".01"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText7; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText7; visible: false">
+            <a-text
+              id="rpText7"
+              value="Graffiti is sprawled all across the walls..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="2 2 2"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4"
+              material="color: #000">
+            </a-text>
+        </a-box>
+        <a-box
+          position="0 2 5"
+          rotation="0 0 0"
+          width="4"
+          height="4"
+          depth=".01"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText8; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText8; visible: false">
+            <a-text
+              id="rpText8"
+              value="Ads encroach and replace the sunlight..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4"
+              material="color: #000">
+            </a-text>
+        </a-box>
+
 <!-- Building -->
       <a-entity
         obj-model="obj: #B2"
@@ -93,6 +263,7 @@
         material="color: #000000">
       </a-box>
       <a-entity
+        id="book1"
         obj-model="obj: #Book"
         position="-16.75 1.4 -2"
         scale=".03 .03 .03"
@@ -100,7 +271,9 @@
         material="color: #f5d81b"
         href="index.html"
         event-set__enter="_event: mouseenter; _target: #popText1; visible: true"
-        event-set__leave="_event: mouseleave; _target: #popText1; visible: false">
+        event-set__leave="_event: mouseleave; _target: #popText1; visible: false"
+        event-set__enterColor="_event: mouseenter; _target: #book1; material.color:#ffffff"
+        event-set__leaveColor="_event: mouseleave; _target: #book1; material.color:#f5d81b">
           <a-text
             id="popText1"
             value="A Librarian's Guide to the Universe"
@@ -135,6 +308,7 @@
         material="color: #3d3d3d">
       </a-entity>
       <a-entity
+        id="book2"
         obj-model="obj: #Book"
         position="-.7 17.5 -20.5"
         scale=".3 .5 .75"
@@ -142,7 +316,9 @@
         material="color: #ed1fe6"
         href="Page7.html"
         event-set__enter="_event: mouseenter; _target: #popText2; visible: true"
-        event-set__leave="_event: mouseleave; _target: #popText2; visible: false">
+        event-set__leave="_event: mouseleave; _target: #popText2; visible: false"
+        event-set__enterColor="_event: mouseenter; _target: #book2; material.color:#ffffff"
+        event-set__leaveColor="_event: mouseleave; _target: #book2; material.color:#ed1fe6">
           <a-text
             id="popText2"
             value="Church of Light"
@@ -189,6 +365,7 @@
         material="color: #3d3d3d">
       </a-entity>
       <a-entity
+        id="book3"
         obj-model="obj: #Book"
         position="7 15 13.5"
         scale=".3 .5 .75"
@@ -196,7 +373,9 @@
         material="color: #4de63c"
         href="Page5.html"
         event-set__enter="_event: mouseenter; _target: #popText4; visible: true"
-        event-set__leave="_event: mouseleave; _target: #popText4; visible: false">
+        event-set__leave="_event: mouseleave; _target: #popText4; visible: false"
+        event-set__enterColor="_event: mouseenter; _target: #book3; material.color:#ffffff"
+        event-set__leaveColor="_event: mouseleave; _target: #book3; material.color: #4de63c">
           <a-text
             id="popText4"
             value="Cyber Psycho"
